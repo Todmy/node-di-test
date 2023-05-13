@@ -1,0 +1,11 @@
+services:
+  wallet:
+    class: "./src/Wallet"
+  
+  person:
+    class: "./src/Person"
+    arguments: ["Jack", "@wallet"]
+
+  greeter:
+    class: "./src/Greeter"
+    arguments: ["@person"]
